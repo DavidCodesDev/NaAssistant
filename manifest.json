@@ -1,0 +1,56 @@
+{
+    "name": "NaAssistant",
+    "description": "NaAssistant",
+    "version": "0.1",
+    "manifest_version": 2,
+    "options_page": "options.html",
+    "permissions": [
+        "storage",
+        "declarativeContent",
+        "https://*.naruto-arena.net/char/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.naruto-arena.net/missions/*"
+            ],
+            "run_at": "document_idle",
+            "js": [
+                "jquery.js",
+                "mission.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://*.naruto-arena.net/characters-and-skills"
+            ],
+            "run_at": "document_idle",
+            "js": [
+                "jquery.js",
+                "charlist.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "jquery.js",
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+        },
+        "icons": {
+            "16": "images/get_started16.png",
+            "32": "images/get_started32.png",
+            "48": "images/get_started48.png",
+            "128": "images/get_started128.png"
+        }
+    }
+}

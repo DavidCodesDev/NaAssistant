@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        button {
+
+            outline: none;
+
+        }
+
+        body {
+            width: 350px;
+
+        }
+
+        select {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align:center;">
+        <p>Welcome to the assistant overlay.
+            <b>Press the Refresh! button to start!</b>
+            if something has stopped functioning correctly, try pressing Refresh! again. If that doesn't help then
+            reinstall the plugin.
+            If a new character is released or a character has been updated then press Refresh! to repopulate the list.
+            Refreshing
+            may
+            take a while!
+            <br>
+            During battle you can select a character from this list to check out their abilties/chakra/cooldowns.
+            <br>
+            <b>Plugin made by: Plastic#2886 (AKA Mastermind)</b>
+
+        </p>
+        <button id="refresh">Refresh!</button>
+    </div>
+    <br>
+
+    <select id="getData">
+        <option>Choose a character</option>
+    </select>
+    <div class="characterDescription"></div>
+    <script src="jquery.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>
