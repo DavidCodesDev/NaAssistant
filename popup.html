@@ -14,20 +14,31 @@
 
         }
 
-        select {
-            display: block;
-            margin: 0 auto;
+        div.selectbox {
+
+            text-align: center;
+
+        }
+
+        progress[value] {
+            width: 150px;
+            height: 10px;
         }
     </style>
 </head>
 
+
+
 <body>
     <div style="text-align:center;">
-        <p>Welcome to the assistant overlay.
+        <p>Welcome to the assistant.
             <b>Press the Refresh! button to start!</b>
-            if something has stopped functioning correctly, try pressing Refresh! again. If that doesn't help then
-            reinstall the plugin.
-            If a new character is released or a character has been updated then press Refresh! to repopulate the list.
+            There are 2 tabs, Characters and Mission tabs. You can refresh each tab by pressing their refresh button.
+            If the refresh button gets stuck, that is due to connection issues with the website during the process, you
+            will have to reinstall if it breaks.
+            Next update will fix this issue completely.
+            If a new character is released or a balance update has happened then press refresh to repopulate the list.
+            If you have completed a new mission, press Get Missions button to refresh.
             Refreshing
             may
             take a while!
@@ -37,16 +48,38 @@
             <b>Plugin made by: Plastic#2886 (AKA Mastermind)</b>
 
         </p>
-        <button id="refresh">Refresh!</button>
     </div>
     <br>
 
-    <select id="getData">
-        <option>Choose a character</option>
-    </select>
-    <div class="characterDescription"></div>
+    <button class="tabClass">Characters</button>
+    <button class="tabClass">Missions</button>
+
+
+    <div id="Characters" class="tabcontent">
+        <br>
+        <button id="refresh">Refresh!</button>
+
+        <div class="selectbox">
+            <select id="getData">
+                <option>Choose a character</option>
+            </select>
+        </div>
+        <div class="characterDescription"></div>
+    </div>
+
+    <div style="display:none" id="Missions" class="tabcontent">
+        <br>
+        <button class="getMissions">Get missions</button>
+
+        <div class="missionInfo">
+        </div>
+    </div>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
     <script src="jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
     <script src="popup.js"></script>
+
 </body>
 
 </html>

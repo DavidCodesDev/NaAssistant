@@ -1,10 +1,11 @@
 {
     "name": "NaAssistant",
     "description": "NaAssistant",
-    "version": "0.1",
+    "version": "0.2",
     "manifest_version": 2,
     "options_page": "options.html",
     "permissions": [
+        "activeTab",
         "storage",
         "declarativeContent",
         "https://*.naruto-arena.net/char/*"
@@ -35,9 +36,9 @@
         "scripts": [
             "jquery.js",
             "background.js"
-        ],
-        "persistent": false
+        ]
     },
+    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js; object-src 'self'",
     "page_action": {
         "default_popup": "popup.html",
         "default_icon": {
