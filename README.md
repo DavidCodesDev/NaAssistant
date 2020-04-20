@@ -15,6 +15,19 @@ gif captured from naruto-arena website
 gif captured from naruto-arena website
 <img src="https://i.imgur.com/OVUMwkP.gif"/>
 
+**NEW UPDATE v0.2:**
+- You can now see your mission progress in the plugin popup!
+- Character list in the popup is now SEARCHABLE by typing names!
+
+**BUGFIXES v0.2:**
+- The refresh button does not get stuck on loading anymore!
+- The links in the popup window are now clickable and will redirect you to the clicked URL.
+
+
+Gifs: https://i.gyazo.com/87195916aa0909379d88a6030680c5a2.mp4
+
+https://i.gyazo.com/42b5c23d55eb5558d642bd626536d807.mp4
+
 The plugin is reviewed and uploaded on the Google Webstore for easy install: https://chrome.google.com/webstore/detail/naassistant/jmoneokkbkmcmnbenodlhfmblpjakmck
 
 You can also just install this via github, download as ZIP file in the upper right corner, unpack, and load the folder in chrome chrome://extensions with developer mode turned on.
