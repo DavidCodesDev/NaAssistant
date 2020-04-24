@@ -2,7 +2,7 @@
 NaAssistant is a chrome plugin that adds additional features to the browser game Naruto-Arena. It edits the local view of the user to add additional features as QOL improvements.
 
 **IMPORTANT UPDATE: I have been banned because of this project. The admin claimed I am able to catch user credentials and ''hack'' them, while I have explained many times he can inspect the code himself and that google has approved this extension as having no malicious files. Context here: https://boards.naruto-arena.net/viewtopic.php?f=41&t=5613 .  It first started with them removing my forum post of the release of this extension, then they edited the website's DOM so it would break my extension, without any discussion or asking me to disable the plugin, then I started the thread I linked above. I think they banned me because I was doing a better job than them at improving the website. Other users have sadly been banned for defending me.
-I am not sad that this happened, I can still keep updating this to bypass their updates, users can just load this github source code as an extension, I see this as a compliment that many people were using this extension and that the admins were jealous**
+I am not sad that this happened. I see this as a compliment that many people were using this extension and that the admins were jealous**
 
 - Mission images are clickable and redirect to the clicked mission (UPDATE: literally 3 days after releasing this plugin the devs fixed this problem internally themselves)
 - Mission requirements are clickable and redirect to the clicked mission
