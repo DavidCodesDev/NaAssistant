@@ -1,7 +1,9 @@
 # NaAssistant
 NaAssistant is a chrome plugin that adds additional features to the browser game Naruto-Arena. It edits the local view of the user to add additional features as QOL improvements.
 
-- Mission images are clickable and redirect to the clicked mission
+
+
+- Mission images are clickable and redirect to the clicked mission (UPDATE: literally 3 days after releasing this plugin the devs fixed this problem internally themselves)
 - Mission requirements are clickable and redirect to the clicked mission
 video example (captured from naruto-arena website):
 https://i.imgur.com/yXjcwuY.mp4
