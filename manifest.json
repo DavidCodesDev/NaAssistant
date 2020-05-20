@@ -1,13 +1,15 @@
 {
     "name": "NaAssistant",
     "description": "NaAssistant",
-    "version": "0.2",
+    "version": "0.4",
     "manifest_version": 2,
     "options_page": "options.html",
     "permissions": [
         "activeTab",
         "storage",
         "declarativeContent",
+        "https://naruto-arena.net/selectionv1",
+        "https://naruto-arena.net/battle",
         "https://*.naruto-arena.net/char/*"
     ],
     "content_scripts": [
@@ -36,7 +38,8 @@
         "scripts": [
             "jquery.js",
             "background.js"
-        ]
+        ],
+        "persistent": true
     },
     "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js; object-src 'self'",
     "page_action": {

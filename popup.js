@@ -32,7 +32,7 @@ window.onload = function(){
     $("#refresh").prop('disabled',true);
   }
   })
-
+  
   $(document).ready(function(){
     $('body').on('click', 'a', function(){
       chrome.tabs.create({url: $(this).attr('href')});
@@ -52,9 +52,21 @@ chrome.storage.local.get("missionProgress", function(e){
     PopulateMissions(e);
   }
 });
+function ShowIcon() {
+  var gif = $('.loading');
+  $(gif).each(function(){
+    $(this).css("display","block");
+  })
+} 
 
+function HideIcon() {
+  var gif = $('.loading');
+  $(gif).each(function(){
+    $(this).css("display","none");
+  })
+}
 function PopulateBox(result){
-  console.log('test');
+HideIcon();
   loadedFirstTime = true;
   allCharsInArray = result.characterArray;
   $("#getData").empty();
@@ -67,6 +79,7 @@ function PopulateBox(result){
   }
 }
 function PopulateMissions(result){
+  HideIcon();
   allMissionsInArray = result.missionProgress;
   $(".missionInfo").empty();
   for (let index = 0; index < allMissionsInArray.length; index++) {
@@ -111,11 +124,11 @@ function GetSavedChar(e){
 }
 
 $("#refresh").click(function(){
-  $(this).prop('disabled',true);
+  //$(this).prop('disabled',true);
   console.log("has to refresh characters now");
-
+  ShowIcon();
   chrome.runtime.sendMessage({msg: "refreshFunc"});
-  chrome.storage.local.set({"refreshButtonState": false});
+  //chrome.storage.local.set({"refreshButtonState": false});
 })
 
 function TurnBackOnButton(){
@@ -160,8 +173,9 @@ $(".tabClass").click(function(){
 
 
 $(".getMissions").click(function(){
-  chrome.storage.local.set({"missionButtonState": false});
-  $(".getMissions").prop('disabled',true);
+  //chrome.storage.local.set({"missionButtonState": false});
+  //$(".getMissions").prop('disabled',true);
+  ShowIcon();
   console.log("has to refresh mission now");
   chrome.runtime.sendMessage({msg: "refreshMission"});
 

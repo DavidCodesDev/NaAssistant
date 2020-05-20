@@ -1,6 +1,13 @@
-var characterCard = document.getElementsByClassName("description");
-$(".description").wrapAll(`<ul id="myUl" style="list-style: none;"></ul>`);
-$(".description").each(function(){
+var characterCard = document.getElementsByClassName("brspacer")[6];
+// charArray = [];
+// $(".chardescr").each(function(){
+//     charArray.push((this).parent());
+// })
+console.log($(".brspacer"));
+var allchars = $(".brspacer").eq(3).find($("div:not([class])"));
+console.log(allchars);
+$(allchars).wrapAll(`<ul id="myUl" style="list-style: none;"></ul>`);
+$(allchars).each(function(){
     $(this).wrap("<li></li>");
 })
 

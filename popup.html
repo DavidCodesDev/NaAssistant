@@ -14,6 +14,15 @@
 
         }
 
+        .loading {
+
+            background-image: url('Loading.gif');
+            background-repeat: no-repeat;
+            float: right;
+            height: 100px;
+
+        }
+
         div.selectbox {
 
             text-align: center;
@@ -58,6 +67,11 @@
     <div id="Characters" class="tabcontent">
         <br>
         <button id="refresh">Refresh!</button>
+        <div style="display:none" class="loading" ;>Loading
+
+        </div>
+        <br>
+
 
         <div class="selectbox">
             <select id="getData">
@@ -70,7 +84,10 @@
     <div style="display:none" id="Missions" class="tabcontent">
         <br>
         <button class="getMissions">Get missions</button>
+        <div style="display:none" class="loading" ;>Loading
 
+        </div>
+        <br>
         <div class="missionInfo">
         </div>
     </div>
