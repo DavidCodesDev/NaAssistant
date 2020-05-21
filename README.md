@@ -9,9 +9,11 @@ video example (captured from naruto-arena website):
 https://i.imgur.com/yXjcwuY.mp4
 
 - Mission pages show recommended teams to complete the missions
+
 ![Recommended mission teams](https://i.imgur.com/chc05v4.png)
 
 - The plugin popup now shows all your mission progress in bars
+
 ![mission progress bars](https://i.imgur.com/D0nKRpj.png)
 
 
