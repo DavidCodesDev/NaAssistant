@@ -1,5 +1,5 @@
+(function(){
 
- 
 var characterArray = [];
 var characterName;
 var characterId;
@@ -42,14 +42,13 @@ chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse){
       if(request.msg == "refreshFunc") {
         RetrieveAllCharacters();
-        }  console.log("listened");
+        }  
 
   }
 );
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse){
       if(request.msg == "refreshMission") RetrieveAllMissions();
-      console.log("listened");
   }
 );
 
@@ -64,14 +63,12 @@ chrome.runtime.onMessage.addListener(
         });
         chrome.storage.local.remove("characterArray");
         arrayOfCharacterObjects = [];
-        console.log(arrayOfCharacterObjects);
 
             return $.ajax({
               url: 'https://naruto-arena.net/characters-and-skills',
               type: "GET",
               dataType: "html",
               success: function(data){
-                console.log("testing");
                 characterArray = [];
                 var allChars = $(data).find("h2");
                 $(allChars).each(function(){
@@ -83,7 +80,6 @@ chrome.runtime.onMessage.addListener(
                 
 
                   if(breakLoopChar == true){
-                    console.log("breaking loop");
                     break;
                   }
 
@@ -92,17 +88,16 @@ chrome.runtime.onMessage.addListener(
                     type: "GET",
                     dataType: "html",
                     success: function(data){
-                      console.log(characterName);
                       let characterObject = {};
                       characterObject.name = characterName;
-                      //console.log(data);
+                      characterObject.id = $(data).find('.skilldescr').find('img').attr('src').match(/\d+/)[0];
+
                       let energyArray = [];
                       $(data).find(".charskill").find('img').each(function(){
                         if($(this).attr('src').includes('energy')){
                           energyArray.push($(this));
                         }
                       })
-                      console.log(energyArray);
                       let energyText = '';
 
                       let greenText = '0';
@@ -132,7 +127,6 @@ chrome.runtime.onMessage.addListener(
                       energyText = greenText+redText+blueText+whiteText;
                       characterObject.energy = energyText;
                       })
-                      console.log(arrayOfCharacterObjects);
                       arrayOfCharacterObjects.push(characterObject);         
                   }
                   })
@@ -241,7 +235,6 @@ chrome.runtime.onMessage.addListener(
             //chrome.runtime.sendMessage({msg: "enableButtonMission"});
             chrome.runtime.sendMessage({msg: "youCanPopulateMissionsNow"});
         
-            console.log(arrayOfAllActiveMissions);
             })
           })
           }
@@ -249,3 +242,4 @@ chrome.runtime.onMessage.addListener(
         })
 
         }
+      })();

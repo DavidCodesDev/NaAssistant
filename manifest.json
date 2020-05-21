@@ -1,18 +1,26 @@
 {
     "name": "NaAssistant",
     "description": "NaAssistant",
-    "version": "0.4",
+    "version": "0.5",
     "manifest_version": 2,
     "options_page": "options.html",
     "permissions": [
         "activeTab",
         "storage",
         "declarativeContent",
-        "https://naruto-arena.net/selectionv1",
-        "https://naruto-arena.net/battle",
         "https://*.naruto-arena.net/char/*"
     ],
     "content_scripts": [
+        {
+            "matches": [
+                "https://*.naruto-arena.net/ninja-missions/*"
+            ],
+            "run_at": "document_idle",
+            "js": [
+                "jquery.js",
+                "individualmission.js"
+            ]
+        },
         {
             "matches": [
                 "https://*.naruto-arena.net/missions/*"
@@ -42,6 +50,9 @@
         "persistent": true
     },
     "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js; object-src 'self'",
+    "web_accessible_resources": [
+        "missionpaths.json"
+    ],
     "page_action": {
         "default_popup": "popup.html",
         "default_icon": {

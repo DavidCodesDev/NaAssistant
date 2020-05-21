@@ -1,4 +1,4 @@
-
+(function(){
 let dropDown = document.getElementById('getData');
 var chosenChar;
 var allCharsInArray;
@@ -181,3 +181,4 @@ $(".getMissions").click(function(){
 
 })
 
+})();

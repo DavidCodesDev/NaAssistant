@@ -17,7 +17,11 @@ gif captured from naruto-arena website
 gif captured from naruto-arena website
 <img src="https://i.imgur.com/OVUMwkP.gif"/>
 
-**NEW UPDATE v0.2:**
+**UPDATE v0.5:**
+- Major bugfixes, the extension doesn't freeze after reopening chrome anymore
+- Added recommended teams to mission pages!
+
+**UPDATE v0.2:**
 - You can now see your mission progress in the plugin popup!
 - Character list in the popup is now SEARCHABLE by typing names!
 
@@ -37,4 +41,4 @@ You can also just install this via github, download as ZIP file in the upper rig
 naruto-arena.net is not owned by me. This chrome plugin just edits the user's local view through html and js.
 
 Have fun and Enjoy!
-You can contact me on discord: Plastic#2886
+You can contact me on discord: Plastic#9999

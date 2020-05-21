@@ -1,0 +1,20 @@
+{
+  "name": "naassistant",
+  "version": "1.0.0",
+  "description": "Chrome Extension for the web browser game Naruto-Arena",
+  "main": "background.js",
+  "dependencies": {
+    "jquery": "^3.5.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavoMyan/NaAssistant.git"
+  },
+  "author": "DavoMyan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavoMyan/NaAssistant/issues"
+  },
+  "homepage": "https://github.com/DavoMyan/NaAssistant#readme"
+}
