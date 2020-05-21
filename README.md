@@ -8,6 +8,13 @@ NaAssistant is a chrome plugin that adds additional features to the browser game
 video example (captured from naruto-arena website):
 https://i.imgur.com/yXjcwuY.mp4
 
+- Mission pages show recommended teams to complete the missions
+![Recommended mission teams](https://i.imgur.com/chc05v4.png)
+
+- The plugin popup now shows all your mission progress in bars
+![mission progress bars](https://i.imgur.com/D0nKRpj.png)
+
+
 - The character list in the game manual has a search function and filter by chakra option.
 gif captured from naruto-arena website
 <img src="https://i.imgur.com/Hqtnk7Y.gif"/>
